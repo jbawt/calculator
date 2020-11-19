@@ -1,34 +1,39 @@
 <template>
-  <div id="app">
+  <div class="app">
     <Header />
+    <Container />
   </div>
 </template>
 
 <script>
 import Header from './components/Header.vue'
+import Container from './components/caculator/Container'
 
 export default {
   name: 'App',
   components: {
-    Header
+    Header,
+    Container
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  margin-top: 60px;
-}
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+body {
+  font-family: 'Courier New', Courier, monospace;
+  line-height: 1.2em;
+}
 
+.app {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 </style>
