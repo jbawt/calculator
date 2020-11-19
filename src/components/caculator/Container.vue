@@ -1,7 +1,10 @@
 <template>
   <div class="calc-div">
     <NumDisplay v-bind:options="options" />
-    <OptionContainer v-on:option="addOptions($event)" v-on:operand="addOptions($event)"/>
+    <OptionContainer 
+      v-on:option="addOptions($event)" 
+      v-on:operand="addOptions($event)"
+      v-on:answer="answer($event)" />
   </div>
 </template>
 
@@ -27,6 +30,9 @@ export default {
       } else {
         this.options += option;
       }
+    },
+    answer(answer) {
+      this.options = answer;
     }
   }
 }

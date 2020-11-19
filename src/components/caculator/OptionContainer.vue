@@ -1,7 +1,7 @@
 <template>
   <div class="option-container">
     <Numbers v-bind:clear="clear" v-on:option="$emit('option', $event)" />
-    <Operands v-on:operand="$emit('operand', $event)" />
+    <Operands v-on:answer="$emit('answer', $event)" v-on:operand="$emit('operand', $event)" />
   </div>
 </template>
 
